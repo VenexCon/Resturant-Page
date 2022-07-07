@@ -4,13 +4,28 @@ import {menuItems} from "./config"
 
 let menuItems = menuItems;
 
-const destructure =() => {
 
+const moduleTitle = function () {
+    header = document.createElement("div");
+        header.classList.add("content-title");
+            contentTitle = document.createElement("h2");
+                contentTitle.classList.add("header");
+                    contentTitle.innerText("Menu");
+    return header
+
+};
+
+const gridCreater = function () {
+    contentGrid = document.createElement("div");
+        contentGrid.classList.add("content-grid");
+    return contentGrid;
 }
 
-const newItemCard = function () {
+
+const newItemCard = function (itemTitle,hr,itemSum, ingrediants, cost) {
 
     card = document.createElement("div");
+        card.classList.add("item")
 
     cardTitle = document.createElement("h3")
         cardTitle.setAttribute("id", "item-title"); 
@@ -26,8 +41,19 @@ const newItemCard = function () {
     cardIngrediants = document.createElement("p");
         cardIngrediants.setAttribute("id", "ingrediants");
             cardIngrediants.innerText = `${ingrediants}`
+    
+    cardSum = document.createElement("p");
+        cardSum.setAttribute("cost");
+            cardSum.innerText = `${cost}` 
+    
+    
+    
 
-}
+};
+
+menuItems.forEach(item => {
+
+});
 
 
 // on Menu click
