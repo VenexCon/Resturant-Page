@@ -3,6 +3,7 @@
 import {menuItems} from "./config"
     let menu = menuItems;
 
+// perm HTML element
 const content = document.querySelector(".content");
 
 function moduleTitle (string) {
