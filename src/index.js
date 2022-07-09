@@ -1,22 +1,34 @@
 //Imports
 import "./style.scss";
-import {menuItems} from "./config.js";
-import {createItem} from "./menu.js"
+import { menuItems } from "./config";
+import {moduleTitle, gridCreater, newItemCard, loadMenu} from "./menu";
+
+//consts and lets
+const content = document.querySelectorAll(".content");
+
+const aboutTab = document.getElementById("about");
+    aboutTab.addEventListener("click", console.log("about"));
 
 
-const about = document.getElementById("about");
-    about.addEventListener("click", console.log("about"));
+const menuTab = document.getElementById("menu");
+    menuTab.addEventListener("click", console.log("menu"));
 
 
-const menu = document.getElementById("menu");
-    menu.addEventListener("click", console.log("menu"));
+const contactTab = document.getElementById("contact");
+    contactTab.addEventListener("click", console.log("contact"));
 
 
-const contact = document.getElementById("contact");
-    contact.addEventListener("click", console.log("contact"));
+const merchTab = document.getElementById("merch");
+    merchTab.addEventListener("click", console.log("merch"));
 
+// Functions
 
-const merch = document.getElementById("merch");
-    merch.addEventListener("click", console.log("merch"));
+const clearContentDiv =  (content) => {
+    while (content.firstChild) {
+        content.removeChild(content.lastChild);
+      }
+};
 
-createItem();
+const menuTitle = moduleTitle("Menu");
+const createGrid = gridCreater();
+const menuLoad = loadMenu(menuItems);

@@ -1,66 +1,68 @@
 // Menu Operator
 
 import {menuItems} from "./config"
+    let menu = menuItems;
 
-let menuItems = menuItems;
+const content = document.querySelector(".content");
 
-
-const moduleTitle = function () {
-    header = document.createElement("div");
+function moduleTitle (string) {
+    const header = document.createElement("div");
         header.classList.add("content-title");
-            contentTitle = document.createElement("h2");
+            const contentTitle = document.createElement("h2");
                 contentTitle.classList.add("header");
-                    contentTitle.innerText("Menu");
-    return header
-
+                    contentTitle.innerText = `${string}`;
+                        header.appendChild(contentTitle);
+                            content.appendChild(header);
 };
 
-const gridCreater = function () {
-    contentGrid = document.createElement("div");
+function gridCreater () {
+    const contentGrid = document.createElement("div");
         contentGrid.classList.add("content-grid");
-    return contentGrid;
-}
+            content.appendChild(contentGrid);
+};
 
 
-const newItemCard = function (itemTitle,hr,itemSum, ingrediants, cost) {
+function newItemCard (object) {
 
-    card = document.createElement("div");
+    const {itemTitle, itemSum, ingrediants,cost} = object;
+    const contentGrid = document.querySelector(".content-grid")
+    const card = document.createElement("div");
         card.classList.add("item")
 
-    cardTitle = document.createElement("h3")
+    const cardTitle = document.createElement("h3")
         cardTitle.setAttribute("id", "item-title"); 
             cardTitle.innerText = `${itemTitle}`;
-    
-    cardHR = document.createElement("hr");
-        cardHR.classList.add("hr");
+                card.appendChild(cardTitle);
 
-    cardSum = document.createElement("p");
+    const cardHR = document.createElement("hr");
+        cardHR.classList.add("hr");
+        card.appendChild(cardHR);
+
+    const cardSum = document.createElement("p");
         cardSum.setAttribute("id", "item-sum");
             cardSum.innerText = `${itemSum}`;
+                card.appendChild(cardSum);
 
-    cardIngrediants = document.createElement("p");
+    const cardIngrediants = document.createElement("p");
         cardIngrediants.setAttribute("id", "ingrediants");
             cardIngrediants.innerText = `${ingrediants}`
+                card.appendChild(cardIngrediants);
     
-    cardSum = document.createElement("p");
-        cardSum.setAttribute("cost");
-            cardSum.innerText = `${cost}` 
-    
-    
-    
+    const cardCost = document.createElement("p");
+        cardCost.setAttribute("id","cost");
+            cardCost.innerText = `${cost}` 
+                card.appendChild(cardCost);
 
+
+    contentGrid.appendChild(card);
 };
 
-menuItems.forEach(item => {
-
-});
 
 
-// on Menu click
-// loop through array
-// The new card item created
-// Destructure object from array.
-// Assign object props to .textContent(${itemTitle}) etc
-// Append divs to content
-// publish menu to page
-// destroy menu items when other tabs clicked. 
+function loadMenu (menu)  { 
+    menu.forEach(object => { newItemCard(object)
+    });
+};
+
+
+export {moduleTitle, gridCreater, newItemCard, loadMenu,};
