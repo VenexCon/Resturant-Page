@@ -66,4 +66,12 @@ function loadMenu (menu)  {
 };
 
 
-export {moduleTitle, gridCreater, newItemCard, loadMenu,};
+function displayMenu () {
+    moduleTitle("Menu")
+    gridCreater();
+    loadMenu(menuItems);
+}
+
+
+
+export {moduleTitle, gridCreater, newItemCard, loadMenu, displayMenu};

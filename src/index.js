@@ -1,40 +1,55 @@
 //Imports
 import "./style.scss";
 import { menuItems } from "./config";
-import {moduleTitle, gridCreater,loadMenu} from "./menu";
+import {moduleTitle, gridCreater,loadMenu, displayMenu} from "./menu";
 
 //consts and lets
 const content = document.querySelectorAll(".content");
 
+// These are enabled and disabled by the indiviudal tab creators. 
+function menuTab () {
+    const menuTab = document.getElementById("menu");
+        menuTab.addEventListener("click", () => {
+            clearContentDiv();
+            displayMenu();
+        })
+};
 
-//change these to onload functions! 
-const aboutTab = document.getElementById("about");
-    aboutTab.addEventListener("click", console.log("about"));
+function aboutTab () {
+    const aboutTab = document.getElementById("about");
+        aboutTab.addEventListener("click", () => {
+        })
+};
 
+function contactTab () {
+    const contactTab = document.getElementById("contact");
+        contactTab.addEventListener("click", () => {
+            console.log("contactTab");
+        })
+};
 
-const menuTab = document.getElementById("menu");
-    menuTab.addEventListener("click", console.log("menu"));
+function merchTab () {
+    const merchTab = document.getElementById("merch");
+        merchTab.addEventListener("click", () => {
+            console.log("merch Tab");
+        })
+};
 
-
-const contactTab = document.getElementById("contact");
-    contactTab.addEventListener("click", console.log("contact"));
-
-
-const merchTab = document.getElementById("merch");
-    merchTab.addEventListener("click", console.log("merch"));
+window.onload = function () {
+    menuTab();
+    aboutTab();
+    contactTab();
+    merchTab();
+}
 
 
 
 // Functions
-
+//Is called prior to all new content created.
 function clearContentDiv () {
-    const content = document.querySelectorAll(".content");
+    const content = document.querySelector(".content");
     while (content.firstChild) {
         content.removeChild(content.lastChild);
       }
 };
 
-const menuTitle = moduleTitle("Menu");
-const createGrid = gridCreater();
-const menuLoad = loadMenu(menuItems);
-let clearContent = clearContentDiv();
