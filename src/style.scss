@@ -13,6 +13,13 @@ $about-title: rgb(160, 59, 255);
 
 // root seetings 
 
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: $nav-font;
+  }
+
 *{
     padding: 0;
     margin: 0;
@@ -21,7 +28,7 @@ $about-title: rgb(160, 59, 255);
 }
 
 body {
-    //background-image: url(./images/spencer-davis-R_J6KjC68E4-unsplash.jpg);
+    background-image: url(./images/spencer-davis-R_J6KjC68E4-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -235,7 +242,9 @@ nav {
 
     .contactInfo {
         border: 2px black solid;
-        height: 33vh;
+        flex-wrap: wrap;
+        min-height: 33vh;
+        min-width: 20%;
         display: flex;
         flex-direction: row;
 
@@ -253,7 +262,7 @@ nav {
 
             input {
                 display: block;
-                width: 20vw;
+                width: 100%;
             }
 
             .buttonDiv{
@@ -268,13 +277,50 @@ nav {
 
         .contactCopy {
             text-align: start;
-            padding: 0.5rem;;
+            padding: 0.5rem;
+            min-width: 20vw;
+
+            p{
+                color: $cost-color;
+            }
 
 
             h3 {
                 color: $cost-color;
                 font-style: italic;
                 text-decoration: underline;
+            };
+
+            .icon{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 1rem;
+                margin: 0.5rem;
+            };
+
+            .openingHours::before{
+                font: var(--fa-font-solid);
+                content: "\f017";
+                font-size: 1.25rem;
+            };
+
+            .phoneNumber::before{
+                font: var(--fa-font-solid);
+                content: "\f095";
+                font-size: 1.25rem
+            };
+
+            .emailDiv::before{
+                font: var(--fa-font-solid);
+                content: "\f0e0";
+                font-size: 1.25rem
+            }
+
+            .address::before {
+                font: var(--fa-font-solid);
+                content: "\f3c5";
+                font-size: 1.25rem;
             }
         }
         
@@ -285,13 +331,7 @@ nav {
         height: 33vh;
     }
 
-}
-
-
-
-
-
-
+};
 
 
 //FX
@@ -309,5 +349,13 @@ nav {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    };
+
+    .contactInfo {
+        flex-direction: column;
+
+        form {
+            width: 50%
+        }
     }
   };
