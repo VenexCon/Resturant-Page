@@ -81,7 +81,10 @@ nav {
 
 
 }
-
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 .content{
     border: solid 2px $content-title;
     //position: absolute;
@@ -106,6 +109,7 @@ nav {
 
     //grid item styling, only used in the menu.js file. 
     .content-grid {
+        animation: fadein 2s;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -177,6 +181,7 @@ nav {
     //background: rgba(0,0,0,0.7);
     height: 100%;
     width: 100%;;
+    animation: fadein 3s;
 
     #aboutTitle {
         font-style: italic;
@@ -232,6 +237,7 @@ nav {
 
 
 .contactContainer { 
+    animation: fadein 2s;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
