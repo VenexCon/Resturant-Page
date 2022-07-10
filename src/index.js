@@ -6,7 +6,8 @@ import {displayMenu} from "./menu";
 //consts and lets
 const content = document.querySelectorAll(".content");
 
-// These are enabled and disabled by the indiviudal tab creators. 
+
+//Funcs
 function menuTab () {
     const menuTab = document.getElementById("menu");
         menuTab.addEventListener("click", () => {
@@ -43,9 +44,6 @@ window.onload = function () {
     merchTab();
 }
 
-
-
-// Functions
 //Is called prior to all new content created.
 function clearContentDiv () {
     const content = document.querySelector(".content");

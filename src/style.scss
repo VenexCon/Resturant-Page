@@ -8,6 +8,7 @@ $nav-font: red;
 $nav-hover:yellow;
 $content-title: red;
 $cost-color: yellow;
+$about-title: rgb(160, 59, 255);
 
 
 // root seetings 
@@ -20,7 +21,7 @@ $cost-color: yellow;
 }
 
 body {
-    background-image: url(./images/spencer-davis-R_J6KjC68E4-unsplash.jpg);
+    //background-image: url(./images/spencer-davis-R_J6KjC68E4-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -94,7 +95,7 @@ nav {
         //border: solid 2px black;
         width: fit-content;
         margin: auto;
-    }
+    };
 
     //grid item styling, only used in the menu.js file. 
     .content-grid {
@@ -143,13 +144,68 @@ nav {
                 padding: 0.25rem;
             }
         }
-    }
-
-    //about section 
-
-
-
+    };
+    
 };
+
+
+.aboutInfo{
+    background: rgba(0,0,0,0.7);
+
+    #aboutTitle {
+        font-style: italic;
+        font-weight: bold;
+        color: $about-title;
+        margin: 1rem auto;
+        font-size: 2rem;
+        transition: 0.4s;
+        width: fit-content;
+    
+    };
+
+    #aboutTitle:hover {
+        transform:scale(1.05);
+        transition: 0.4s;
+        color: $cost-color;
+    };
+
+    #aboutTitle:hover {
+        scale: (1.1rem);
+        transition: 0.4s;
+        color: $nav-font;
+    };
+
+    hr {
+        width: 80%;
+        margin: auto;
+        height: 0.2rem;
+        border: $nav-font;
+        background-color: $nav-font;
+    };
+
+    p {
+        margin-top: 2rem;
+        display: block;
+        color: $about-title;
+    };
+
+    #aboutTitleTwo {
+        margin: 1rem 0 1rem 0;
+        color: $cost-color;
+    };
+
+    li {
+        list-style-type: none;
+        text-align: start;
+        padding: 0.25rem;
+        color: $cost-color;
+    };
+
+}
+
+
+
+
 
 
 

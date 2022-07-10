@@ -28,10 +28,6 @@ let menuItems = [
     },
 ];
 
-const about = {
-    title: "About",
-    
-}
 
 
 export {menuItems};
