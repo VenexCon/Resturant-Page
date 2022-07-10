@@ -28,6 +28,20 @@ let menuItems = [
     },
 ];
 
+const aboutObject = {
+    aboutTitleText: "DRIVE",
+    aboutContext:`Is an out-run inspired diner, which aims to provide a retro dining experience for 
+                    all those lost souls, just riding the nights highway`,
+    aboutAtmosphere:`WE provide a chill mood, good food and arcade style games open for all guests to use.`,
+    aboutFood: `We serve burgers, hotdogs, steaks, breakfast food, coffee and snacks to all those
+                just looking to get a break from the world.`,
+    aboutTitleTwo:`WHO ARE YOU?`,
+    listOne:`A Cop looking to solve that hard case?`,
+    listTwo:`A guy just in need of a mission? `,
+    listThree:`A girl who needs to get away from the world?`,
+    listFour:`Teenagers looking to meet-up away from prying eyes?`,
+    listFive:`A lost soul in need of some good company?`,
+    lastStatement :`Chuck on that vintage clothing and come down to DRIVE`,
+};
 
-
-export {menuItems};
+export {menuItems, aboutObject};

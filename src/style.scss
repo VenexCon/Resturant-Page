@@ -81,7 +81,8 @@ nav {
     width: 60vw;
     margin: auto;
     text-align: center;
-    height: 80vh;
+    min-height: 80vh;
+    max-height: fit-content;
     margin-top: 2.5rem;
     background: rgba(0,0,0,0.3);
     //backdrop-filter: blur(16px);
@@ -149,8 +150,10 @@ nav {
 };
 
 
-.aboutInfo{
-    background: rgba(0,0,0,0.7);
+.aboutContainer{
+    //background: rgba(0,0,0,0.7);
+    height: 100%;
+    width: 100%;;
 
     #aboutTitle {
         font-style: italic;
@@ -167,12 +170,6 @@ nav {
         transform:scale(1.05);
         transition: 0.4s;
         color: $cost-color;
-    };
-
-    #aboutTitle:hover {
-        scale: (1.1rem);
-        transition: 0.4s;
-        color: $nav-font;
     };
 
     hr {
@@ -201,6 +198,13 @@ nav {
         color: $cost-color;
     };
 
+    #aboutLastStatement {
+        color: $about-title;
+        margin-top: 4rem;
+        font-size: 1.5rem;
+
+    }
+
 }
 
 
@@ -213,6 +217,7 @@ nav {
     transform: scale(1.05);
     transition: 0.4s;
     border: solid 4px $cost-color ;
+    height: fit-content;
 
 }
 

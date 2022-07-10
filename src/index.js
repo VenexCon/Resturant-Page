@@ -1,7 +1,8 @@
 //Imports
 import "./style.scss";
-import { menuItems } from "./config";
+import {menuItems} from "./config";
 import {displayMenu} from "./menu";
+import { displayAbout } from "./about";
 
 //consts and lets
 const content = document.querySelectorAll(".content");
@@ -20,6 +21,7 @@ function aboutTab () {
     const aboutTab = document.getElementById("about");
         aboutTab.addEventListener("click", () => {
             clearContentDiv();
+            displayAbout();
         })
 };
 
