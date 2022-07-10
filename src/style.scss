@@ -235,7 +235,6 @@ nav {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    //align-items: center;
     justify-content: center;
     row-gap: 2rem;
 
@@ -354,13 +353,13 @@ nav {
 
 //FX
 
-/* .content:hover {
+.content:hover {
     transform: scale(1.05);
     transition: 0.4s;
     border: solid 4px $cost-color ;
     height: fit-content;
 
-}; */
+};
 
 @media only screen and (max-width: 600px) {
     .content-grid{
