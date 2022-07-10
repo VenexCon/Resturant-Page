@@ -241,16 +241,15 @@ nav {
 
 
     .contactInfo {
-        border: 2px black solid;
-        flex-wrap: wrap;
         min-height: 33vh;
-        min-width: 20%;
+        min-width: 50%;
+        max-width: 100%;
         display: flex;
         flex-direction: row;
-
+        flex-wrap: wrap;
 
         form {
-            border: 2px solid red;
+            max-width: 100%;;
 
             label {
                 display: flex;
@@ -263,6 +262,20 @@ nav {
             input {
                 display: block;
                 width: 100%;
+            }
+
+            #textLabel {
+                text-align: start;
+                margin-left:0.5rem;
+                color: $cost-color;
+            }
+
+            #messageBox{
+                margin: 0.5rem;
+                resize: none;
+                overflow: scroll;
+                height: 8rem;
+                max-width: 100%;
             }
 
             .buttonDiv{
@@ -278,7 +291,7 @@ nav {
         .contactCopy {
             text-align: start;
             padding: 0.5rem;
-            min-width: 20vw;
+            min-width: 50%;
 
             p{
                 color: $cost-color;
@@ -329,6 +342,11 @@ nav {
     .location { 
         border: 2px solid red;
         height: 33vh;
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
     }
 
 };
@@ -347,15 +365,12 @@ nav {
 @media only screen and (max-width: 600px) {
     .content-grid{
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        flex-wrap: wrap-reverse;
     };
 
     .contactInfo {
         flex-direction: column;
 
-        form {
-            width: 50%
-        }
     }
   };
