@@ -1,7 +1,7 @@
 //Imports
 import "./style.scss";
 import { menuItems } from "./config";
-import {moduleTitle, gridCreater,loadMenu, displayMenu} from "./menu";
+import {displayMenu} from "./menu";
 
 //consts and lets
 const content = document.querySelectorAll(".content");
@@ -18,20 +18,21 @@ function menuTab () {
 function aboutTab () {
     const aboutTab = document.getElementById("about");
         aboutTab.addEventListener("click", () => {
+            clearContentDiv();
         })
 };
 
 function contactTab () {
     const contactTab = document.getElementById("contact");
         contactTab.addEventListener("click", () => {
-            console.log("contactTab");
+            clearContentDiv();
         })
 };
 
 function merchTab () {
     const merchTab = document.getElementById("merch");
         merchTab.addEventListener("click", () => {
-            console.log("merch Tab");
+            clearContentDiv();
         })
 };
 

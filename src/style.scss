@@ -75,16 +75,19 @@ nav {
 }
 
 .content{
-    border: solid 2px red;
+    border: solid 2px $content-title;
     //position: absolute;
     width: 60vw;
     margin: auto;
     text-align: center;
     height: 80vh;
     margin-top: 2.5rem;
-    //background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(8px);
-    padding: 1rem;;
+    background: rgba(0,0,0,0.3);
+    //backdrop-filter: blur(16px);
+    padding: 1rem;
+    transition: 0.4s;
+
+
 
     .content-title{
         color: $content-title;
@@ -93,6 +96,7 @@ nav {
         margin: auto;
     }
 
+    //grid item styling, only used in the menu.js file. 
     .content-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -141,6 +145,18 @@ nav {
         }
     }
 
+    //about section 
+
+
+
+};
+
+
+
+.content:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+    border: solid 4px $cost-color ;
 
 }
 

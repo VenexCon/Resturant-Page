@@ -74,4 +74,4 @@ function displayMenu () {
 
 
 
-export {moduleTitle, gridCreater, newItemCard, loadMenu, displayMenu};
+export {displayMenu};

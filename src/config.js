@@ -1,3 +1,5 @@
+
+//imported to index.js and used with the menu.js functions
 let menuItems = [
     
     {   //Hot dog
@@ -25,5 +27,11 @@ let menuItems = [
         cost: "$2.99"
     },
 ];
+
+const about = {
+    title: "About",
+    
+}
+
 
 export {menuItems};
