@@ -21,7 +21,7 @@ $about-title: rgb(160, 59, 255);
 }
 
 body {
-    //background-image: url(./images/spencer-davis-R_J6KjC68E4-unsplash.jpg);
+    background-image: url(./images/spencer-davis-R_J6KjC68E4-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -84,11 +84,10 @@ nav {
     min-height: 80vh;
     max-height: fit-content;
     margin-top: 2.5rem;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.7);
     //backdrop-filter: blur(16px);
     padding: 1rem;
     transition: 0.4s;
-
 
 
     .content-title{
@@ -146,6 +145,23 @@ nav {
             }
         }
     };
+
+    @media only screen and (max-width: 800px) {
+        .content-grid{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            .item{
+
+                #cost {
+                    position: relative;
+                    display: block;
+                }
+
+            }
+        }
+      };
     
 };
 
@@ -183,7 +199,7 @@ nav {
     p {
         margin-top: 2rem;
         display: block;
-        color: $about-title;
+        color: $cost-color;
     };
 
     #aboutTitleTwo {
@@ -209,9 +225,7 @@ nav {
 
 
 
-
-
-
+//FX
 
 .content:hover {
     transform: scale(1.05);
@@ -219,8 +233,12 @@ nav {
     border: solid 4px $cost-color ;
     height: fit-content;
 
-}
+};
 
 @media only screen and (max-width: 600px) {
-   
-  }
+    .content-grid{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+  };

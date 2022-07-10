@@ -44,6 +44,7 @@ window.onload = function () {
     aboutTab();
     contactTab();
     merchTab();
+    displayAbout();
 }
 
 //Is called prior to all new content created.
