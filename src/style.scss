@@ -236,6 +236,9 @@ nav {
     .contactInfo {
         border: 2px black solid;
         height: 33vh;
+        display: flex;
+        flex-direction: row;
+
 
         form {
             border: 2px solid red;
@@ -245,18 +248,37 @@ nav {
                 flex-direction: column;
                 text-align: start;
                 color: $cost-color;
-                padding: 1rem;
+                padding: 0.5rem;
             };
 
             input {
                 display: block;
-                width: 30vw;
+                width: 20vw;
             }
 
+            .buttonDiv{
+                //border: 2px solid yellow;;
+                margin-left: 0;
+                text-align: start;
+                padding: 0.5rem;
+                
+            }
             
+        };
+
+        .contactCopy {
+            text-align: start;
+            padding: 0.5rem;;
+
+
+            h3 {
+                color: $cost-color;
+                font-style: italic;
+                text-decoration: underline;
+            }
         }
         
-    }
+    };
 
     .location { 
         border: 2px solid red;
