@@ -1,7 +1,7 @@
 // Menu Operator
 
 import {menuItems} from "./config"
-    let menu = menuItems;
+    
 
 // perm HTML element
 

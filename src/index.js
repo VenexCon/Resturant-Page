@@ -2,7 +2,8 @@
 import "./style.scss";
 import {menuItems} from "./config";
 import {displayMenu} from "./menu";
-import { displayAbout } from "./about";
+import {displayAbout} from "./about";
+import { displayContact } from "./contact";
 
 //consts and lets
 const content = document.querySelectorAll(".content");
@@ -29,6 +30,7 @@ function contactTab () {
     const contactTab = document.getElementById("contact");
         contactTab.addEventListener("click", () => {
             clearContentDiv();
+            displayContact();
         })
 };
 
